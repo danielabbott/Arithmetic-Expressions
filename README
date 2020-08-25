@@ -1,0 +1,12 @@
+Usage:
+
+#include "Arithmetic.h"
+...
+ArithmeticExpression e("($var + 3*6) / 2");
+std::optional<double> value = e.value_if_possible(VariableSet {
+	{"var", 3.0}
+});
+
+
+Order of operations:
+Brackets always first, multiply/divide before add/subtract.
